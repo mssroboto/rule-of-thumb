@@ -1,0 +1,13 @@
+$bps: (
+  'tablet': 600px,
+  'desktop': 1024px,
+  'large-desktop': 1440px,
+);
+
+@mixin from($media) {
+  $min-width-bp: (map-get($bps, $media) or $media);
+
+  @media only screen and (min-width: $min-width-bp) {
+    @content;
+  }
+}

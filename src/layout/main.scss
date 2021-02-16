@@ -1,0 +1,27 @@
+@import './reset';
+@import './mixins';
+@import './colors.scss';
+@import './grid';
+@import './typography';
+
+html,
+body {
+  color: $color-grey;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.body--nav-open {
+  height: 100vh;
+  overflow: hidden;
+
+  @include from(tablet) {
+    height: auto;
+    overflow: auto;
+  }
+}
+
+a {
+  color: $color-grey;
+}

@@ -1,0 +1,7 @@
+@import '../../../layout/main.scss';
+
+.Characters {
+  &__title {
+    grid-column: 1/-1;
+  }
+}

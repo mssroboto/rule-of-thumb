@@ -1,0 +1,47 @@
+@import "../../../../layout/main.scss";
+
+.Closing {
+  background-color: rgba($color-grey, 0.3);
+  bottom: 0;
+  color: $color-white;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 66%;
+    background: rgba($color-white, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__wrapper {
+    align-items: center;
+  }
+
+  &__subtitle {
+    font-size: 13px;
+    grid-column: 1;
+    text-transform: uppercase;
+
+    @include from(tablet) {
+      grid-column: 3;
+    }
+  }
+
+  &__days {
+    color: $color-grey;
+    font-size: 24px;
+    grid-column: 3/-1;
+    margin: 8px 10px;
+    z-index: 2;
+
+    @include from(tablet) {
+      font-size: 32px;
+      grid-column: 5/-1;
+    }
+  }
+}

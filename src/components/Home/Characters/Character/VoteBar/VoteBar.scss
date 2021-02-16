@@ -1,0 +1,59 @@
+@import "../../../../../layout/main.scss";
+
+.VoteBar {
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  z-index: 2;
+
+  &__percentage-counter {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  &__counter {
+    width: 50%;
+    z-index: 4;
+    display: inline-block;
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__count {
+    color: $color-white;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 4px;
+
+    &--thumb {
+      width: 35px;
+      margin: 0 7px;
+    }
+
+    &--number {
+      font-size: 30px;
+      margin: 0;
+      font-weight: 300;
+    }
+  }
+
+  &__votes {
+    height: inherit;
+    display: inline-block;
+    vertical-align: top;
+
+    &--up {
+      background-color: rgba($color-aqua, 0.8);
+    }
+
+    &--down {
+      background-color: rgba($color-yellow, 0.8);
+      text-align: right;
+    }
+  }
+}

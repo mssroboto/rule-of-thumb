@@ -1,0 +1,24 @@
+@import "../../../../../layout/main.scss";
+
+.VoteButton {
+  background-color: $color-aqua;
+  height: 31px;
+  left: 0;
+  padding: 3px;
+  position: absolute;
+  top: 8px;
+  width: 31px;
+  z-index: 2;
+
+  img {
+    width: 100%;
+  }
+
+  &--down {
+    background-color: $color-yellow;
+  }
+
+  &--border {
+    border: 2px solid $color-white;
+  }
+}

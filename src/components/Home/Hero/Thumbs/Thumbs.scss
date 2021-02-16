@@ -1,0 +1,27 @@
+@import '../../../../layout/main.scss';
+
+.Thumbs {
+  grid-column: 1/-1;
+  
+  @include from(tablet) {
+    grid-column: 2/-2;
+  }
+
+  @include from(desktop) {
+    grid-column: 1/6;
+  }
+  
+  &__thumb {
+    padding: 16px;
+    width: 50%;
+  
+    &--up {
+      background-color: rgba($color-aqua, .8);
+    }
+  
+    &--down {
+      background-color: rgba($color-yellow, .8);
+    }
+  }
+  
+}

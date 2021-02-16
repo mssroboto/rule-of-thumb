@@ -1,0 +1,23 @@
+@import '../../../layout/main.scss';
+
+.Hero {
+  $headerHeight: 110px;
+
+  align-items: center;
+  background-position: 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  min-height: calc(100vh + #{$headerHeight});
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include from(tablet) {
+    margin-top: -68px;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+}

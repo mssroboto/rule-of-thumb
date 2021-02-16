@@ -1,0 +1,42 @@
+@import '../../../../../layout/main.scss';
+
+.Vote {
+  align-items: center;
+  display: flex;
+  position: relative;
+  z-index: 2;
+
+  &__now {
+    color: $color-white;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &__button {
+    width: 31px;
+    height: 31px;
+    background-color: $color-aqua;
+    margin-right: 12px;
+    padding: 3px;
+    position: relative;
+
+    &--down {
+      background-color: $color-yellow;
+    }
+
+    &--border {
+      border: 2px solid $color-white;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__now {
+    border: 2px solid $color-white;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+  
