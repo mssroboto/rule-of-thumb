@@ -1,8 +1,8 @@
-import React from 'react';
-import Box from './Box/Box';
-import Thumbs from './Thumbs/Thumbs';
-import Closing from './Closing/Closing';
-import './Hero.scss';
+import React from 'react'
+import Box from './Box/Box'
+import Thumbs from './Thumbs/Thumbs'
+import Closing from './Closing/Closing'
+import './Hero.scss'
 
 const Hero = (props) => {
   const content = props.content;

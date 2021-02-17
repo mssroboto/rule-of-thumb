@@ -6,12 +6,6 @@
   position: relative;
   z-index: 2;
 
-  &__now {
-    color: $color-white;
-    font-size: 20px;
-    line-height: 1;
-  }
-
   &__button {
     width: 31px;
     height: 31px;
@@ -24,7 +18,7 @@
       background-color: $color-yellow;
     }
 
-    &--border {
+    &--active {
       border: 2px solid $color-white;
     }
 
@@ -33,10 +27,23 @@
     }
   }
 
-  &__now {
+  &__buttons {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__cta {
     border: 2px solid $color-white;
+    color: $color-white;
     font-size: 16px;
+    font-size: 20px;
+    line-height: 1;
     padding: 12px 20px;
+
+    &--hidden {
+      visibility: hidden;
+    }
   }
 }
   

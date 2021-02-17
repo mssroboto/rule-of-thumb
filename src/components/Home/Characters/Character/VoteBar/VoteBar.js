@@ -1,7 +1,7 @@
-import React from 'react';
-import thumbUp from '../../../../../assets/icon-thumb-up.png';
-import thumbDown from '../../../../../assets/icon-thumb-down.png';
-import './VoteBar.scss';
+import React from 'react'
+import thumbUp from '../../../../../assets/icon-thumb-up.png'
+import thumbDown from '../../../../../assets/icon-thumb-down.png'
+import './VoteBar.scss'
 
 const VoteBar = (props) => {
   const positiveVotes = props.votes.positive;

@@ -1,5 +1,5 @@
-import React from 'react';
-import './Submit.scss';
+import React from 'react'
+import './Submit.scss'
 
 const Submit = (props) => {
   const content = props.content;

@@ -2,25 +2,51 @@
 
 .Banner {
   margin: 40px 0;
+  position: relative;
+
+  &--close {
+    display: none;
+  }
 
   &__wrapper {
     background-color: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px;
     padding: 20px;
+    position: relative;
+
+    @include from(tablet) {
+      flex-direction: row;
+      margin: 0 24px;
+    }
 
     @include from(desktop) {
       padding: 20px 40px;
+      margin: 0 132px;
+    }
+
+    @include from(large-desktop) {
+      margin: 0 auto;
+      max-width: 1280px;
     }
   }
 
   &__content {
-    grid-column: 1/-1;
+    margin-bottom: 20px;
+    width: 100%;
 
     @include from(tablet) {
-      grid-column: 1/5;
+      margin-bottom: 0;
+      width: 31%;
     }
 
     @include from(desktop) {
-      grid-column: 1/4;
+      width: 24%;
+    }
+
+    @include from(large-desktop) {
+      width: 20%;
     }
   }
 
@@ -33,12 +59,16 @@
     line-height: 1.5;
 
     @include from(tablet) {
-      grid-column: 5/-1;
+      width: 65%;
       margin: 0;
     }
 
     @include from(desktop) {
-      grid-column: 4/-1;
+      width: 70%;
+    }
+
+    @include from(large-desktop) {
+      width: 75%;
     }
   }
 
@@ -55,6 +85,17 @@
   &__title {
     font-size: 37px;
     line-height: 1;
-    margin: 0;
+    margin: 10px 0 20px;
+
+    @include from(tablet) {
+      margin: 0;
+    }
+  }
+
+  &__close {
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }

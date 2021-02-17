@@ -1,7 +1,7 @@
-import React from 'react';
-import IconThumbUp from '../../../../assets/icon-thumb-up.png';
-import IconThumbDown from '../../../../assets/icon-thumb-down.png';
-import './Thumbs.scss';
+import React from 'react'
+import IconThumbUp from '../../../../assets/icon-thumb-up.png'
+import IconThumbDown from '../../../../assets/icon-thumb-down.png'
+import './Thumbs.scss'
 
 const Thumbs = () => {
   return (

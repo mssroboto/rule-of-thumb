@@ -1,17 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import Firebase from '../../../Common/Firebase/Firebase'
 import Vote from './Vote/Vote'
 import VoteBar from './VoteBar/VoteBar'
 import VoteButton from './VoteButton/VoteButton'
-import './Character.scss';
+import './Character.scss'
 
 const Character = (props) => {
-  const content = props.content;
+  const [content, setContent] = useState();
   const id = props.id;
-  const images = require.context('../../../../assets/', true);
-  const source = images(`./${content.image}`);
+  const images = content && require.context('../../../../assets/', true);
+  const source = content && images(`./${content.image}`);
+  const featured = content && content.featured;
 
-  return (
-    <section className="Character" style={{ backgroundImage: `url(${source.default})` }}>
+  useEffect(() => {
+    Firebase.database().ref(`sections/trials/characters/${id}`).on('value', (snapshot) => {
+      setContent(snapshot.val())
+    });
+  },[id])
+
+  return content && !featured ? (
+    <section className="Character" style={{backgroundImage: `url(${source.default})`}}>
       <div className="Character__content">
         <h3 className="Character__name">{content.name}</h3>
         <div className="Character__subtitle">
@@ -24,7 +32,7 @@ const Character = (props) => {
       </div>
       <VoteBar votes={content.votes} />
     </section>
-  );
+  ) : <div className="Character__placeholder"></div>;
 }
 
 export default Character

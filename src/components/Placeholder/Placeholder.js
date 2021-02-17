@@ -1,12 +1,12 @@
 import React from 'react'
 import './Placeholder.scss'
 
-const PlaceholderTwo = () => (
+const Placeholder = (props) => (
   <section className="Placeholder">
     <h1>
-      How to
+      {props.title}
     </h1>
   </section>
 )
 
-export default PlaceholderTwo;
+export default Placeholder;

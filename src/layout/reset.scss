@@ -46,14 +46,15 @@ ol[class] {
 
 /* Sets the main styles for the links */
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 
 /* Removes default styles on buttons */
 button {
-  appearance: none;
   background: transparent;
   border: 0;
+  cursor: pointer;
   margin: 0;
   outline: none;
   padding: 0;

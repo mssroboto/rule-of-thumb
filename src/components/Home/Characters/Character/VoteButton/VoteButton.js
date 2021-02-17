@@ -1,7 +1,7 @@
-import React from 'react';
-import thumbUp from '../../../../../assets/icon-thumb-up.png';
-import thumbDown from '../../../../../assets/icon-thumb-down.png';
-import './VoteButton.scss';
+import React from 'react'
+import thumbUp from '../../../../../assets/icon-thumb-up.png'
+import thumbDown from '../../../../../assets/icon-thumb-down.png'
+import './VoteButton.scss'
 
 const VoteButton = (props) => {
   const {votes} = props;

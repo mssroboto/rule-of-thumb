@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import IconMenu from '../../assets/icon-menu.png';
-import IconClose from '../../assets/icon-close.png';
-import './Header.scss';
+import React, {useState} from 'react'
+import IconMenu from '../../assets/icon-menu.png'
+import IconClose from '../../assets/icon-close.png'
+import './Header.scss'
 
 const Header = (props) => {
   const [menuActive, setMenuState] = useState(false);
@@ -10,7 +10,7 @@ const Header = (props) => {
     const source = images(`./icon-${icon}.png`);
 
     return (
-      <img className="Header__icon-image" src={source.default} alt="" />
+      <img className="Header__icon-image" src={source.default} alt="Search" />
     )
   }
 
@@ -45,7 +45,7 @@ const Header = (props) => {
         <nav className={`Header__nav ${menuActive ? 'Header__nav--open': ''}`}>
           <ul className="Header__list">{navItems()}</ul>
           <button className="Header__menu-close" onClick={() => handleNav(false)}>
-            <img className="Header__close" src={IconClose} alt="" />
+            <img className="Header__close" src={IconClose} alt="Search" />
           </button>
         </nav>
       </div>

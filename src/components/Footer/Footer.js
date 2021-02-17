@@ -1,5 +1,5 @@
-import React from 'react';
-import './Footer.scss';
+import React from 'react'
+import './Footer.scss'
 
 const Footer = (props) => {
   const content = props.content;
@@ -23,7 +23,7 @@ const Footer = (props) => {
       return (
         <li className="Footer__item-icon" key={index}>
           <a className="Footer__icon-link" href={item.link} target="_blank" rel="noreferrer">
-            <img className="Footer__icon" src={source.default} alt="" />
+            <img className="Footer__icon" src={source.default} alt="Social icon" />
           </a>
         </li>
       )
